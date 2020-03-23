@@ -61,8 +61,9 @@
         </div>
         <div class="block text-gray-700 text-center px-4 py-2 mt-4">
             <p class="font-east-sea-dokdo text-4xl tracking-wide p-2">오시는길</p>
-            <div class="font-noti-serif-kr p-2 text-sm mb-4">
+            <div class="font-noti-serif-kr p-2 text-sm leading-loose mb-4">
 {{--                <a href="https://map.kakao.com/link/map/8282484" target="_blank"></a>--}}
+                아벤티움<br />
                 서울 중구 청파로 464 브라운스톤서울 3층입니다.
             </div>
             <div id="map" class="h-64" style="width:100%;"></div>
