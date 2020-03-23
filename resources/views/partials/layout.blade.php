@@ -44,6 +44,14 @@
         // }
     </script>
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KB7L7HP');</script>
+    <!-- End Google Tag Manager -->
+
     <link rel="stylesheet" href="{{ mix('css/main.css') }}">
     <!-- PhotoSwipe -->
     <link rel="stylesheet" href="{{ mix('css/photoswipe/photoswipe.css') }}">
@@ -94,6 +102,10 @@
 
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB7L7HP"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <div id="app">
     @yield('content')
@@ -137,27 +149,6 @@
     marker.setMap(map);
 
     // confetti
-    // var myCanvas = document.createElement('canvas');
-    // document.body.appendChild(myCanvas);
-    //
-    // var myConfetti = confetti.create(myCanvas, { resize: true });
-    //
-    // myConfetti();
-    //
-    // confetti();
-    //
-    // setTimeout(() => {
-    //     confetti.reset();
-    // }, 100);
-
-    // confetti({
-    //     particleCount: 100,
-    //     spread: 70,
-    //     origin: { y: 0.6 }
-    // });
-
-    callConfetti();
-
     function callConfetti() {
         confetti({
             particleCount: 100,
@@ -166,9 +157,17 @@
         });
     }
 
+    callConfetti();
+
+    function gtmClickWeddingImage(order) {
+        dataLayer.push({
+            'order': order,
+            'event': 'clickWeddingImage'
+        });
+    }
+
     // 안녕하십니까 제제입니다 만나서 방가워요 저는 제제입니다 호호하하 어색해요 사진 그만 찌거요 제제는 엄청 어색해유 그만 어여 찍으란말야
     // 하이하이호럽하이하이호럽 섭섭섭섭 비엔나커피를 마시며 사진을 찍는거는 참 어렵네요
 </script>
-
 </body>
 </html>

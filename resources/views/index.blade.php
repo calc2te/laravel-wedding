@@ -26,34 +26,34 @@
             <div class="font-noti-serif-kr p-2 text-sm mb-4">부끄럽지만 이쁘게 봐주세요.</div>
 
             <div id="demo-test-gallery" class="demo-gallery grid max-w-4xl mx-auto">
-                <a href="{{ asset('images/studio/1.jpg') }}" data-size="1200x800" data-med="{{ asset('images/studio/1.jpg') }}" data-med-size="1200x800" >
+                <a href="{{ asset('images/studio/1.jpg') }}" onclick="gtmClickWeddingImage('1')" data-size="1200x800" data-med="{{ asset('images/studio/1.jpg') }}" data-med-size="1200x800" >
                     <img src="{{ asset('images/studio/1.jpg') }}" alt="image">
                 </a>
-                <a href="{{ asset('images/studio/2.jpg') }}" data-size="1200x800" data-med="{{ asset('images/studio/2.jpg') }}" data-med-size="1200x800" >
+                <a href="{{ asset('images/studio/2.jpg') }}" onclick="gtmClickWeddingImage('2')" data-size="1200x800" data-med="{{ asset('images/studio/2.jpg') }}" data-med-size="1200x800" >
                     <img src="{{ asset('images/studio/2.jpg') }}" alt="image">
                 </a>
-                <a href="{{ asset('images/studio/3.jpg') }}" data-size="800x1200" data-med="{{ asset('images/studio/3.jpg') }}" data-med-size="800x1200" >
+                <a href="{{ asset('images/studio/3.jpg') }}" onclick="gtmClickWeddingImage('3')" data-size="800x1200" data-med="{{ asset('images/studio/3.jpg') }}" data-med-size="800x1200" >
                     <img src="{{ asset('images/studio/3.jpg') }}" alt="image">
                 </a>
-                <a href="{{ asset('images/studio/4.jpg') }}" data-size="800x1200" data-med="{{ asset('images/studio/4.jpg') }}" data-med-size="800x1200" >
+                <a href="{{ asset('images/studio/4.jpg') }}" onclick="gtmClickWeddingImage('4')" data-size="800x1200" data-med="{{ asset('images/studio/4.jpg') }}" data-med-size="800x1200" >
                     <img src="{{ asset('images/studio/4.jpg') }}" alt="image">
                 </a>
-                <a href="{{ asset('images/studio/5.jpg') }}" data-size="1200x800" data-med="{{ asset('images/studio/5.jpg') }}" data-med-size="1200x800" >
+                <a href="{{ asset('images/studio/5.jpg') }}" onclick="gtmClickWeddingImage('5')" data-size="1200x800" data-med="{{ asset('images/studio/5.jpg') }}" data-med-size="1200x800" >
                     <img src="{{ asset('images/studio/5.jpg') }}" alt="image">
                 </a>
-                <a href="{{ asset('images/studio/6.jpg') }}" data-size="1200x800" data-med="{{ asset('images/studio/6.jpg') }}" data-med-size="1200x800" >
+                <a href="{{ asset('images/studio/6.jpg') }}" onclick="gtmClickWeddingImage('6')" data-size="1200x800" data-med="{{ asset('images/studio/6.jpg') }}" data-med-size="1200x800" >
                     <img src="{{ asset('images/studio/6.jpg') }}" alt="image">
                 </a>
-                <a href="{{ asset('images/studio/7.jpg') }}" data-size="800x1200" data-med="{{ asset('images/studio/7.jpg') }}" data-med-size="800x1200" >
+                <a href="{{ asset('images/studio/7.jpg') }}" onclick="gtmClickWeddingImage('7')" data-size="800x1200" data-med="{{ asset('images/studio/7.jpg') }}" data-med-size="800x1200" >
                     <img src="{{ asset('images/studio/7.jpg') }}" alt="image">
                 </a>
-                <a href="{{ asset('images/studio/8.jpg') }}" data-size="800x1200" data-med="{{ asset('images/studio/8.jpg') }}" data-med-size="800x1200" >
+                <a href="{{ asset('images/studio/8.jpg') }}" onclick="gtmClickWeddingImage('8')" data-size="800x1200" data-med="{{ asset('images/studio/8.jpg') }}" data-med-size="800x1200" >
                     <img src="{{ asset('images/studio/8.jpg') }}" alt="image">
                 </a>
-                <a href="{{ asset('images/studio/9.jpg') }}" data-size="1200x800" data-med="{{ asset('images/studio/9.jpg') }}" data-med-size="1200x800" >
+                <a href="{{ asset('images/studio/9.jpg') }}" onclick="gtmClickWeddingImage('9')" data-size="1200x800" data-med="{{ asset('images/studio/9.jpg') }}" data-med-size="1200x800" >
                     <img src="{{ asset('images/studio/9.jpg') }}" alt="image">
                 </a>
-                <a href="{{ asset('images/studio/10.jpg') }}" data-size="1200x800" data-med="{{ asset('images/studio/10.jpg') }}" data-med-size="1200x800" >
+                <a href="{{ asset('images/studio/10.jpg') }}" onclick="gtmClickWeddingImage('10')" data-size="1200x800" data-med="{{ asset('images/studio/10.jpg') }}" data-med-size="1200x800" >
                     <img src="{{ asset('images/studio/10.jpg') }}" alt="image">
                 </a>
             </div>

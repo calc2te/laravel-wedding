@@ -68,6 +68,10 @@
         },
         methods: {
             writeWeddingBoard() {
+                dataLayer.push({
+                    'event': 'clickWriteBoardButton'
+                });
+
                 let writeFlag = true;
 
                 this.nameError = false;
@@ -99,9 +103,13 @@
                     this.$store.dispatch("getWeddingBoards");
                     this.name = '';
                     this.text = '';
+
+                    dataLayer.push({
+                        'event': 'writeBoard'
+                    });
                 }).catch(response => {
                     console.log(response);
-                })
+                });
             }
         }
     }
