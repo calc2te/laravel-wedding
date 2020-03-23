@@ -127,6 +127,9 @@
     // 지도를 생성합니다
     var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 
+    // 마우스 드래그와 모바일 터치를 이용한 지도 이동 가능 여부를 막는다
+    map.setDraggable(false);
+
     // 마우스 휠과 모바일 터치를 이용한 지도 확대, 축소를 막는다
     // map.setZoomable(false);
 
