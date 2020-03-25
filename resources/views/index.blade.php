@@ -85,6 +85,9 @@
                 정은이와 창섭이가 함께 만들었습니다 ♥
             </div>
         </div>
+
+        <div class="block text-gray-700 text-center px-4 py-2 mt-4">
+        </div>
     </div>
 
     @include('partials.pswp')
