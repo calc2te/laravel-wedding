@@ -1,7 +1,7 @@
 @extends('partials.layout')
 
 @section('content')
-    <div class="container mx-auto pb-10">
+    <div class="max-w-screen-sm mx-auto pb-10">
         <div class="block text-gray-700 text-center px-4 py-2">
             <p class="font-east-sea-dokdo text-4xl p-5"></p>
             <div style="position: relative; overflow:hidden; border-radius:50%;">
