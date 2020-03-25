@@ -28,20 +28,20 @@
                 <div class="w-full">
                     <input class="appearance-none block w-full bg-white text-gray-700 border border-gray-400 rounded py-3 px-4 mb-3 leading-tight"
                            v-bind:class="{ 'border-red-500': nameError }"
-                           id="" type="text" name="name" v-model.trim="name" placeholder="이름">
-                    <p class="text-red-500 text-xs italic mb-3" v-show="nameError">이름을 입력해주세요.</p>
+                           id="" type="text" name="name" v-model.trim="name" placeholder="누구신가요?">
+                    <p class="text-red-500 text-xs italic mb-3" v-show="nameError">누..구..?</p>
                 </div>
                 <div class="w-full">
                     <textarea
                             class="resize-none border rounded w-full bg-white text-gray-700 border border-gray-400 rounded py-3 px-4 mb-3 leading-tight"
                             v-bind:class="{ 'border-red-500': textError }"
-                            id="" type="text" name="text" v-model.trim="text" placeholder="한 마디를 남겨주세요"></textarea>
-                    <p class="text-red-500 text-xs italic mb-3" v-show="textError">한 마디를 남겨주세요.</p>
+                            id="" type="text" name="text" v-model.trim="text" placeholder="한 마디 남겨주시겠어요?"></textarea>
+                    <p class="text-red-500 text-xs italic mb-3" v-show="textError">한 마디..좀..?</p>
                 </div>
             </div>
             <button type="button" id="writeButton" class="w-full bg-yellow-400 text-black text-center py-2 px-4 rounded"
                     @click="writeWeddingBoard">
-                입력하기
+                #옜다받아라
             </button>
         </form>
     </div>
