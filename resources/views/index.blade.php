@@ -72,7 +72,7 @@
             <div id="map" class="h-64 mb-4" style="width:100%;"></div>
             <div class="font-noti-serif-kr p-2 text-sm leading-loose">
                 <span class="text-base font-bold"><span id="subway_emoji" onclick="driving_animation('subway_emoji')">🚃</span> 지하철을 이용하실건가요?</span><br />
-                충정로역 2, 5호선 4번출구<br />
+                2, 5호선 충정로역 4번출구<br />
                 <br />
                 <span class="text-base font-bold"><span id="bus_emoji" onclick="driving_animation('bus_emoji')">🚌</span> 버스를 이용하실건가요?</span><br />
                 한국경제신문사.서소문역사공원 정류장<br />
