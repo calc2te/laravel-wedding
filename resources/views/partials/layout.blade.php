@@ -19,29 +19,29 @@
     <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
 
     <!-- Web Application Manifest -->
-{{--    <link rel="manifest" href="{{ url('/wedding/manifest.json') }}">--}}
+    <link rel="manifest" href="{{ url('/manifest.json') }}">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="sample pwa">
+    <meta name="apple-mobile-web-app-title" content="김창섭 ♥ 정정은의 청첩장">
     <link rel="apple-touch-icon" href="/images/icons/icon152.png">
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="sample pwa">
+    <meta name="application-name" content="김창섭 ♥ 정정은의 청첩장">
     <link rel="icon" sizes="152x152" href="/images/icons/icon152.png">
 
     <script>
         // Register service worker.
-        // if ('serviceWorker' in navigator) {
-        //     window.addEventListener('load', () => {
-        //         navigator.serviceWorker.register('/wedding-service-worker.js')
-        //             .then((reg) => {
-        //                 console.log('Service worker registered.', reg);
-        //             });
-        //     });
-        // }
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((reg) => {
+                        console.log('Service worker registered.', reg);
+                    });
+            });
+        }
     </script>
 
     <!-- Google Tag Manager -->

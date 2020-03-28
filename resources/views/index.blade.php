@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="max-w-screen-sm mx-auto pb-10">
+        <!-- 처음 사진 -->
         <div class="block text-gray-700 text-center px-4 py-2">
             <p class="font-east-sea-dokdo text-4xl p-5"></p>
             <div style="position: relative; overflow:hidden; border-radius:50%;">
@@ -10,6 +11,7 @@
                      style="position:absolute;left:4px;top:30px;right:0;bottom:0;" />
             </div>
         </div>
+        <!-- 처음 안내 -->
         <div class="block text-gray-700 text-center px-4 py-2 mt-4">
             <div class="font-noti-serif-kr p-2">
                 4월의 아름다운 날<br />
@@ -21,6 +23,7 @@
                 아벤티움
             </div>
         </div>
+        <!-- 사진 -->
         <div class="block text-gray-700 text-center px-4 py-2 mt-4">
             <p class="font-east-sea-dokdo text-4xl tracking-wide p-2">사진</p>
             <div class="font-noti-serif-kr p-2 text-sm mb-4">부끄럽지만 이쁘게 봐주세요.</div>
@@ -58,16 +61,17 @@
                 </a>
             </div>
 
-        </div>
+        </div>진
+        <!-- 오시는길 -->
         <div class="block text-gray-700 text-center px-4 py-2 mt-4">
             <p class="font-east-sea-dokdo text-4xl tracking-wide p-2">오시는길</p>
             <div class="font-noti-serif-kr p-2 text-sm leading-loose mb-4">
-{{--                <a href="https://map.kakao.com/link/map/8282484" target="_blank"></a>--}}
                 아벤티움<br />
                 서울 중구 청파로 464 브라운스톤서울 3층입니다.
             </div>
             <div id="map" class="h-64" style="width:100%;"></div>
         </div>
+        <!-- 차량안내 -->
         <div class="block text-gray-700 text-center px-4 py-2 mt-4">
             <p class="font-east-sea-dokdo text-4xl tracking-wide p-2"><u>차량</u>을 이용하시나요?</p>
             <div class="font-noti-serif-kr text-sm leading-loose p-2 mb-4">
@@ -76,19 +80,17 @@
                 찾아와주시면 감사하겠습니다.
             </div>
         </div>
-
+        <!-- 방명록 & 남기는말 -->
         <wedding-board-component></wedding-board-component>
-
+        <!-- 청첩장 소개 -->
         <div class="block text-gray-700 text-center px-4 py-2 mt-4">
             <p class="font-east-sea-dokdo text-4xl tracking-wide p-2">이 모바일 청첩장은요?</p>
             <div class="font-noti-serif-kr text-sm leading-loose p-2 mb-4">
                 정은이와 창섭이가 함께 만들었습니다 ♥
             </div>
         </div>
-
-        <div class="block text-gray-700 text-center px-4 py-2 mt-4">
-        </div>
     </div>
 
+    <!-- 사진 gallery layout -->
     @include('partials.pswp')
 @stop
