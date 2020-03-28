@@ -61,7 +61,7 @@
                 </a>
             </div>
 
-        </div>진
+        </div>
         <!-- 오시는길 -->
         <div class="block text-gray-700 text-center px-4 py-2 mt-4">
             <p class="font-east-sea-dokdo text-4xl tracking-wide p-2">오시는길</p>
@@ -69,17 +69,31 @@
                 아벤티움<br />
                 서울 중구 청파로 464 브라운스톤서울 3층입니다.
             </div>
-            <div id="map" class="h-64" style="width:100%;"></div>
-        </div>
-        <!-- 차량안내 -->
-        <div class="block text-gray-700 text-center px-4 py-2 mt-4">
-            <p class="font-east-sea-dokdo text-4xl tracking-wide p-2"><u>차량</u>을 이용하시나요?</p>
-            <div class="font-noti-serif-kr text-sm leading-loose p-2 mb-4">
-                네비게이션에<br />
-                <b><u>센트럴플레이스(서울 중구 중림동 419)</u></b>를 검색해서<br />
-                찾아와주시면 감사하겠습니다.
+            <div id="map" class="h-64 mb-4" style="width:100%;"></div>
+            <div class="font-noti-serif-kr p-2 text-sm leading-loose">
+                <span class="text-base font-bold">🚃 지하철을 이용하실건가요?</span><br />
+                충정로역 2, 5호선 4번출구<br />
+                <br />
+                <span class="text-base font-bold">🚌 버스를 이용하실건가요?</span><br />
+                한국경제신문사.서소문역사공원 정류장<br />
+                파란버스 370, 603번<br />
+                녹색버스 7011, 7013A, 7013B, 7017번<br />
+                <br />
+                <span class="text-base font-bold">🚗 차량를 이용하실건가요?</span><br />
+                주차장<br />
+                센트럴플레이스(서울 중구 중림동 419)<br />
+                <br />
             </div>
         </div>
+        <!-- 차량안내 -->
+{{--        <div class="block text-gray-700 text-center px-4 py-2 mt-4">--}}
+{{--            <p class="font-east-sea-dokdo text-4xl tracking-wide p-2"><u>차량</u>을 이용하시나요?</p>--}}
+{{--            <div class="font-noti-serif-kr text-sm leading-loose p-2 mb-4">--}}
+{{--                네비게이션에<br />--}}
+{{--                <b><u>센트럴플레이스(서울 중구 중림동 419)</u></b>를 검색해서<br />--}}
+{{--                찾아와주시면 감사하겠습니다.--}}
+{{--            </div>--}}
+{{--        </div>--}}
         <!-- 방명록 & 남기는말 -->
         <wedding-board-component></wedding-board-component>
         <!-- 청첩장 소개 -->
