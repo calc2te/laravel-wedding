@@ -13,3 +13,32 @@
     -webkit-transition: opacity 333ms cubic-bezier(.4,0,.22,1);
     transition: opacity 333ms cubic-bezier(.4,0,.22,1);
 }
+
+.driving {
+    position: relative;
+    animation: driving 5s linear;
+}
+
+@keyframes driving {
+    0% {
+        right: 0%;
+    }
+    40% {
+        right: 40%;
+    }
+    50% {
+        right: 50%;
+        opacity: 0;
+    }
+    90% {
+        right: -100%;
+        opacity: 0;
+    }
+    95% {
+        right: -10%;
+        opacity: 1;
+    }
+    100% {
+        right: 0%;
+    }
+}
