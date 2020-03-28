@@ -37,6 +37,8 @@ class WeddingBoardController extends Controller
         $text = $request->input('text');
         $name = $request->input('name');
 
+        $session_id = session()->getId();
+
         $agent = $_SERVER['HTTP_USER_AGENT'];
         $ip = $_SERVER['REMOTE_ADDR'];
 
@@ -44,6 +46,7 @@ class WeddingBoardController extends Controller
         $weddingBoard->name = $name;
         $weddingBoard->text = $text;
         $weddingBoard->date = Carbon::now();
+        $weddingBoard->session_id = $session_id;
         $weddingBoard->agent = $agent;
         $weddingBoard->ip = $ip;
         $weddingBoard->save();
