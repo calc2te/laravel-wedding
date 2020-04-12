@@ -56,50 +56,6 @@
     <!-- PhotoSwipe -->
     <link rel="stylesheet" href="{{ mix('css/photoswipe/photoswipe.css') }}">
     <link rel="stylesheet" href="{{ mix('css/photoswipe/default-skin.css') }}">
-
-    <style>
-        body {
-            position:relative;
-        }
-        body::after {
-            content: "";
-            background: url('/images/bg_yellow_01.jpeg');
-            opacity: 0.5;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            position: absolute;
-            z-index: -1;
-        }
-        .font-noti-serif-kr
-        {
-            font-family: 'Noto Serif KR', serif;
-        }
-        .font-east-sea-dokdo
-        {
-            font-family: 'East Sea Dokdo', cursive;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 0.5rem;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .grid .image {
-            border-radius: 10px;
-        }
-        .pswp--animate_opacity,
-        .pswp__bg,
-        .pswp__caption,
-        .pswp__top-bar,
-        .pswp--has_mouse .pswp__button--arrow--left,
-        .pswp--has_mouse .pswp__button--arrow--right{
-            -webkit-transition: opacity 333ms cubic-bezier(.4,0,.22,1);
-            transition: opacity 333ms cubic-bezier(.4,0,.22,1);
-        }
-    </style>
-
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
