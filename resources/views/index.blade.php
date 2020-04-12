@@ -96,6 +96,13 @@
 {{--        </div>--}}
         <!-- 방명록 & 남기는말 -->
         <wedding-board-component></wedding-board-component>
+        <!-- 공유하기 hidden -->
+        <div class="block text-gray-700 text-center px-4 py-2 mt-4 hidden">
+            <p class="font-east-sea-dokdo text-4xl tracking-wide p-2">공유하실건가요?</p>
+            <div class="font-noti-serif-kr text-sm leading-loose p-2 mb-4">
+                <span onclick="sendKakaoLink()">카카오</span>
+            </div>
+        </div>
         <!-- 청첩장 소개 -->
         <div class="block text-gray-700 text-center px-4 py-2 mt-4">
             <p class="font-east-sea-dokdo text-4xl tracking-wide p-2">이 모바일 청첩장은요?</p>

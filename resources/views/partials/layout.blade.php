@@ -117,6 +117,7 @@
 <script src="{{ mix('js/photoswipe/photoswipe-ui-default.min.js') }}"></script>
 <script src="/js/photoswipe/initialize.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e82a05c0892020e957cbe79bc5d0f817&libraries=services"></script>
+<script src="/js/kakao.min.js"></script>
 <script>
     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
     var options = { //지도를 생성할 때 필요한 기본 옵션
@@ -183,6 +184,18 @@
 
     // 안녕하십니까 제제입니다 만나서 방가워요 저는 제제입니다 호호하하 어색해요 사진 그만 찌거요 제제는 엄청 어색해유 그만 어여 찍으란말야
     // 하이하이호럽하이하이호럽 섭섭섭섭 비엔나커피를 마시며 사진을 찍는거는 참 어렵네요
+
+    Kakao.init('e82a05c0892020e957cbe79bc5d0f817');
+    Kakao.isInitialized();
+
+    function sendKakaoLink() {
+        // gtm
+
+        // kakaolink
+        Kakao.Link.sendCustom({
+            templateId: 23275,
+        });
+    }
 </script>
 </body>
 </html>
