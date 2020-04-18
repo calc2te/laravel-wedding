@@ -76,6 +76,7 @@
 <script src="/js/kakao.min.js"></script>
 <script>
     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+    // var modal_container = document.getElementById('map-modal');
     var options = { //지도를 생성할 때 필요한 기본 옵션
         center: new kakao.maps.LatLng(37.5609518403502, 126.96813086761468), //지도의 중심좌표.
         level: 5 //지도의 레벨(확대, 축소 정도)
@@ -83,6 +84,7 @@
 
     // 지도를 생성합니다
     var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+    // var map_modal = new kakao.maps.Map(modal_container, options);
 
     // 마우스 드래그와 모바일 터치를 이용한 지도 이동 가능 여부를 막는다
     // map.setDraggable(false);
@@ -104,9 +106,14 @@
         position: markerPosition,
         image: markerImage // 마커이미지 설정
     });
+    // var marker_modal = new kakao.maps.Marker({
+    //     position: markerPosition,
+    //     image: markerImage // 마커이미지 설정
+    // });
 
     // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map);
+    // marker_modal.setMap(map_modal);
 
     // confetti
     function callConfetti() {
@@ -151,6 +158,53 @@
         Kakao.Link.sendCustom({
             templateId: 23275,
         });
+    }
+
+    // modal
+    var road_modal = document.getElementById('road-modal')
+    var declaration_modal = document.getElementById('declaration-modal')
+    var modal_type = 'road'
+
+    road_modal.addEventListener('click', function (event) {
+        event.preventDefault()
+        modal_type = 'road'
+        toggleModal()
+    })
+    declaration_modal.addEventListener('click', function (event) {
+        event.preventDefault()
+        modal_type = 'declaration'
+        toggleModal()
+    })
+
+    const overlay = document.querySelectorAll('.modal-overlay')
+    for (var i = 0; i < overlay.length; i++) {
+        overlay[i].addEventListener('click', toggleModal)
+    }
+
+    var closemodal = document.querySelectorAll('.modal-close')
+    for (var i = 0; i < closemodal.length; i++) {
+        closemodal[i].addEventListener('click', toggleModal)
+    }
+
+    document.onkeydown = function(evt) {
+        evt = evt || window.event
+        var isEscape = false
+        if ("key" in evt) {
+            isEscape = (evt.key === "Escape" || evt.key === "Esc")
+        } else {
+            isEscape = (evt.keyCode === 27)
+        }
+        if (isEscape && document.body.classList.contains('modal-active')) {
+            toggleModal()
+        }
+    };
+
+    function toggleModal () {
+        const body = document.querySelector('body')
+        const modal = document.querySelector('.' + modal_type + '-modal')
+        modal.classList.toggle('opacity-0')
+        modal.classList.toggle('pointer-events-none')
+        body.classList.toggle('modal-active')
     }
 </script>
 </body>
