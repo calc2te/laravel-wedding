@@ -56,50 +56,6 @@
     <!-- PhotoSwipe -->
     <link rel="stylesheet" href="{{ mix('css/photoswipe/photoswipe.css') }}">
     <link rel="stylesheet" href="{{ mix('css/photoswipe/default-skin.css') }}">
-
-    <style>
-        body {
-            position:relative;
-        }
-        body::after {
-            content: "";
-            background: url('/images/bg_yellow_01.jpeg');
-            opacity: 0.5;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            position: absolute;
-            z-index: -1;
-        }
-        .font-noti-serif-kr
-        {
-            font-family: 'Noto Serif KR', serif;
-        }
-        .font-east-sea-dokdo
-        {
-            font-family: 'East Sea Dokdo', cursive;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 0.5rem;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .grid .image {
-            border-radius: 10px;
-        }
-        .pswp--animate_opacity,
-        .pswp__bg,
-        .pswp__caption,
-        .pswp__top-bar,
-        .pswp--has_mouse .pswp__button--arrow--left,
-        .pswp--has_mouse .pswp__button--arrow--right{
-            -webkit-transition: opacity 333ms cubic-bezier(.4,0,.22,1);
-            transition: opacity 333ms cubic-bezier(.4,0,.22,1);
-        }
-    </style>
-
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -117,8 +73,10 @@
 <script src="{{ mix('js/photoswipe/photoswipe-ui-default.min.js') }}"></script>
 <script src="/js/photoswipe/initialize.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e82a05c0892020e957cbe79bc5d0f817&libraries=services"></script>
+<script src="/js/kakao.min.js"></script>
 <script>
     var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+    // var modal_container = document.getElementById('map-modal');
     var options = { //지도를 생성할 때 필요한 기본 옵션
         center: new kakao.maps.LatLng(37.5609518403502, 126.96813086761468), //지도의 중심좌표.
         level: 5 //지도의 레벨(확대, 축소 정도)
@@ -126,6 +84,7 @@
 
     // 지도를 생성합니다
     var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+    // var map_modal = new kakao.maps.Map(modal_container, options);
 
     // 마우스 드래그와 모바일 터치를 이용한 지도 이동 가능 여부를 막는다
     // map.setDraggable(false);
@@ -147,9 +106,14 @@
         position: markerPosition,
         image: markerImage // 마커이미지 설정
     });
+    // var marker_modal = new kakao.maps.Marker({
+    //     position: markerPosition,
+    //     image: markerImage // 마커이미지 설정
+    // });
 
     // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map);
+    // marker_modal.setMap(map_modal);
 
     // confetti
     function callConfetti() {
@@ -183,6 +147,65 @@
 
     // 안녕하십니까 제제입니다 만나서 방가워요 저는 제제입니다 호호하하 어색해요 사진 그만 찌거요 제제는 엄청 어색해유 그만 어여 찍으란말야
     // 하이하이호럽하이하이호럽 섭섭섭섭 비엔나커피를 마시며 사진을 찍는거는 참 어렵네요
+
+    Kakao.init('e82a05c0892020e957cbe79bc5d0f817');
+    Kakao.isInitialized();
+
+    function sendKakaoLink() {
+        // gtm
+
+        // kakaolink
+        Kakao.Link.sendCustom({
+            templateId: 23275,
+        });
+    }
+
+    // modal
+    var road_modal = document.getElementById('road-modal')
+    var declaration_modal = document.getElementById('declaration-modal')
+    var modal_type = 'road'
+
+    road_modal.addEventListener('click', function (event) {
+        event.preventDefault()
+        modal_type = 'road'
+        toggleModal()
+    })
+    declaration_modal.addEventListener('click', function (event) {
+        event.preventDefault()
+        modal_type = 'declaration'
+        toggleModal()
+    })
+
+    const overlay = document.querySelectorAll('.modal-overlay')
+    for (var i = 0; i < overlay.length; i++) {
+        overlay[i].addEventListener('click', toggleModal)
+    }
+
+    var closemodal = document.querySelectorAll('.modal-close')
+    for (var i = 0; i < closemodal.length; i++) {
+        closemodal[i].addEventListener('click', toggleModal)
+    }
+
+    document.onkeydown = function(evt) {
+        evt = evt || window.event
+        var isEscape = false
+        if ("key" in evt) {
+            isEscape = (evt.key === "Escape" || evt.key === "Esc")
+        } else {
+            isEscape = (evt.keyCode === 27)
+        }
+        if (isEscape && document.body.classList.contains('modal-active')) {
+            toggleModal()
+        }
+    };
+
+    function toggleModal () {
+        const body = document.querySelector('body')
+        const modal = document.querySelector('.' + modal_type + '-modal')
+        modal.classList.toggle('opacity-0')
+        modal.classList.toggle('pointer-events-none')
+        body.classList.toggle('modal-active')
+    }
 </script>
 </body>
 </html>
