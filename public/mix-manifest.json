@@ -2,6 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/main.css": "/css/main.css",
+    "/js/all.js": "/js/all.js",
     "/js/photoswipe/photoswipe.min.js": "/js/photoswipe/photoswipe.min.js",
     "/js/photoswipe/photoswipe-ui-default.min.js": "/js/photoswipe/photoswipe-ui-default.min.js",
     "/css/photoswipe/photoswipe.css": "/css/photoswipe/photoswipe.css",

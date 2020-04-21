@@ -17,6 +17,12 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
    ]);
 
+mix.scripts([
+    'public/js/photoswipe/initialize.js',
+    'public/js/kakao.min.js',
+    'resources/js/map.js',
+    'resources/js/main.js',
+], 'public/js/all.js');
 
 mix.copy('node_modules/photoswipe/dist/photoswipe.min.js', 'public/js/photoswipe/photoswipe.min.js');
 mix.copy('node_modules/photoswipe/dist/photoswipe-ui-default.min.js', 'public/js/photoswipe/photoswipe-ui-default.min.js');
