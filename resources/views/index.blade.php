@@ -1,6 +1,9 @@
 @extends('partials.layout')
 
 @section('content')
+    <!-- 상단 배너 -->
+    <top-banner-component></top-banner-component>
+
     <div class="max-w-screen-sm mx-auto pb-10">
         <!-- 처음 사진 -->
         <div class="block text-gray-700 text-center px-4 py-2">
@@ -103,6 +106,7 @@
         </div>
     </div>
 
+    <!-- 하단 메뉴 -->
     <ul class="w-full flex fixed bottom-0 bg-yellow-400">
         <li class="flex-1">
             <a id="road-modal" class="text-center block py-2 px-4" href="#;">🚗 오시는길</a>

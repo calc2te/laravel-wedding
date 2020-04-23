@@ -15,6 +15,9 @@ window.PhotoSwipeUI_Default = require('photoswipe/dist/photoswipe-ui-default');
 // canvas-confetti
 window.confetti = require('canvas-confetti/src/confetti');
 
+// moment
+window.moment = require('moment');
+
 import Vuex from 'vuex'
 import storeData from "./store/index"
 
