@@ -24,7 +24,7 @@
         },
         mounted() {
             this.dateNow = moment(new Date(), "YYYY-MM-DD HH:mm");
-            this.dateThat = moment('2020-04-24 14:43', "YYYY-MM-DD HH:mm");
+            this.dateThat = moment('2020-04-25 15:00', "YYYY-MM-DD HH:mm");
             this.diffTime = this.dateNow.diff(this.dateThat);
 
             if (this.diffTime <= 0) {
