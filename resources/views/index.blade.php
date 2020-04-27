@@ -7,7 +7,7 @@
 
 @section('content')
     <!-- 상단 배너 -->
-{{--    <top-banner-component page="main_page"></top-banner-component>--}}
+    <top-banner-component page="main_page"></top-banner-component>
 
     <div class="max-w-screen-sm mx-auto pb-10">
         <!-- 처음 사진 -->
