@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="김창섭 ♥ 정정은의 청첩장">
+    <meta name="description" content="@yield('meta-title')">
     <meta name="theme-color" content="#ededed" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>김창섭 ♥ 정정은의 청첩장</title>
 
-    <meta property="og:title" content="김창섭 ♥ 정정은의 청첩장" />
-    <meta property="og:description" content="4월의 아름다운 날 저희 두사람, 결혼합니다." />
-    <meta property="og:image" content="/images/photo1.jpg" />
-    <meta property="og:url" content="/wedding" />
+    <meta property="og:title" content="@yield('meta-title')" />
+    <meta property="og:description" content="@yield('meta-description')" />
+    <meta property="og:image" content="@yield('meta-image')" />
+    <meta property="og:url" content="@yield('meta-url')" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
@@ -73,5 +73,6 @@
 <script src="{{ mix('js/photoswipe/photoswipe-ui-default.min.js') }}"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e82a05c0892020e957cbe79bc5d0f817&libraries=services"></script>
 <script src="{{ mix('js/all.js') }}"></script>
+@yield('script')
 </body>
 </html>

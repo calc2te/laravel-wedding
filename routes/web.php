@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'WeddingController@index');
+Route::get('/after', 'WeddingController@after');
