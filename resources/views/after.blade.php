@@ -2,7 +2,7 @@
 
 @section('meta-title', '김창섭 ♥ 정정은의 청첩장, 그 후...')
 @section('meta-description', '저희 두사람, 여러분 덕에 예쁘게 결혼했습니다.')
-@section('meta-image', '/images/photo1.jpg')
+@section('meta-image', '/images/after/IMG_5884.JPG')
 @section('meta-url', '/after')
 
 @section('content')
