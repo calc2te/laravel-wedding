@@ -1,8 +1,13 @@
 @extends('partials.layout')
 
+@section('meta-title', '김창섭 ♥ 정정은의 청첩장')
+@section('meta-description', '4월의 아름다운 날 저희 두사람, 결혼합니다.')
+@section('meta-image', '/images/photo1.jpg')
+@section('meta-url', '/')
+
 @section('content')
     <!-- 상단 배너 -->
-    <top-banner-component></top-banner-component>
+{{--    <top-banner-component page="main_page"></top-banner-component>--}}
 
     <div class="max-w-screen-sm mx-auto pb-10">
         <!-- 처음 사진 -->

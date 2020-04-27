@@ -11,6 +11,7 @@
 <script>
     export default {
         name: "TopBannerComponent",
+        props: ['page'],
         data() {
             return {
                 bannerLink: 'https://www.instagram.com/ireneeeworld/',
@@ -23,6 +24,12 @@
             }
         },
         mounted() {
+            if (this.page === 'after_page') {
+                this.bannerLink = '/'
+                this.bannerTarget = '_self'
+                this.bannerMessage = '❤ 모바일 청첩장 보러가기'
+            }
+
             this.dateNow = moment(new Date(), "YYYY-MM-DD HH:mm");
             this.dateThat = moment('2020-04-25 15:00', "YYYY-MM-DD HH:mm");
             this.diffTime = this.dateNow.diff(this.dateThat);
