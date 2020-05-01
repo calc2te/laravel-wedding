@@ -44,9 +44,11 @@
         <div class="block text-gray-700 text-center px-4 py-2 mt-4 mb-8">
             <p class="font-east-sea-dokdo text-4xl tracking-wide p-2">본식사진</p>
             <div class="font-noti-serif-kr p-2 text-sm mb-4">이렇게 찍어 보내주셔서 감사합니다.</div>
-            <div id="demo-test-gallery" class="grid-masonry max-w-4xl mx-auto">
+            <div id="demo-test-gallery" class="demo-gallery grid-masonry max-w-4xl mx-auto">
                 @foreach($photos_info as $photo_info)
-                    <img class="masonry-item" src="{{ asset('images/after/photo/' . $photo_info['basename']) }}" alt="image">
+                    <a href="{{ asset('images/after/photo/' . $photo_info['basename']) }}" data-size="{{ $photo_info['size'] }}" data-med="{{ asset('images/after/photo/' . $photo_info['basename']) }}" data-med-size="{{ $photo_info['size'] }}" >
+                        <img class="masonry-item" src="{{ asset('images/after/photo/' . $photo_info['basename']) }}" alt="image">
+                    </a>
                 @endforeach
             </div>
         </div>
@@ -80,6 +82,9 @@
             </div>
         </div>
     </div>
+
+    <!-- 사진 gallery layout -->
+    @include('partials.pswp')
 
     <div id="map" style="display: none"></div>
 @stop
